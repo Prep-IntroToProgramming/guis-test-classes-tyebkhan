@@ -16,6 +16,6 @@ public class SimpleGui2{
     }
 
     public static void main(String[] args) {
-        SimpleGui2 gui = new SimpleGuiC();
+        SimpleGui2 gui = new SimpleGui2();
     }
 } 
