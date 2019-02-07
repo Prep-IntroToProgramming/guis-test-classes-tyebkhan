@@ -23,15 +23,11 @@ public class SimpleGui1B implements ActionListener{
 
     public void actionPerformed(ActionEvent event) {
         clicks++;
-        if(button.getText().equals("don't click me")){
-            button.setText("Why don't you listen?");
-        }else{
-            button.setText("don't click me");
-        }
+
         if(clicks%5 == 0){
-            System.out.println(clicks + " is a multiple of 5");
+            button.setText(clicks + " is a multiple of 5");
         }else{
-            System.out.println(clicks);
+            button.setText(clicks+"");
         }
     }
 
