@@ -1,7 +1,7 @@
 import javax.swing.*;
 
 public class SimpleGui2{ 
-    public SimpleGui2() {
+    public SimpleGui2(){
         JFrame frame = new JFrame();
         ImagePanel panel = new ImagePanel();
  
@@ -11,11 +11,11 @@ public class SimpleGui2{
         frame.add(panel);
         //frame.add(panel2);
         //frame.add(label);
-        frame.setSize(300, 300);
+        frame.setSize(panel.rebels.getIconWidth(), panel.rebels.getIconHeight());
         frame.setVisible(true);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         SimpleGui2 gui = new SimpleGui2();
     }
 } 

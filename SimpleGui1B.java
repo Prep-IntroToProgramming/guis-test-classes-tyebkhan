@@ -23,7 +23,6 @@ public class SimpleGui1B implements ActionListener{
 
     public void actionPerformed(ActionEvent event) {
         clicks++;
-
         if(clicks%5 == 0){
             button.setText(clicks + " is a multiple of 5");
         }else{
