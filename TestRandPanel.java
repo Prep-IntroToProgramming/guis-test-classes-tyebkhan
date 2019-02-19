@@ -1,15 +1,42 @@
 import javax.swing.*;
 import java.awt.*;
-public class TestRandPanel{
+import javax.swing.*;
+import java.awt.event.*;
+public class TestRandPanel implements ActionListener{
     JFrame frame;
+    JButton button;
+    public boolean check;
+    //RandomPanel r;
     public TestRandPanel(){
         frame = new JFrame();
+        button = new JButton("Change the Color");
+        //r = new RandomPanel();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new RandomPanel());
+        frame.add(BorderLayout.NORTH, button);
+        frame.add(BorderLayout.CENTER, new RandomPanel());
+        button.addActionListener(this);
         frame.setSize(500,500);
         frame.setVisible(true);
     }
-    public static void main(String[] args){
+
+    public void actionPerformed(ActionEvent a){
+        if(check==true){
+            check = false;
+        }else{
+            check = true;
+        }
+        System.out.println(check);
+    }
+
+    public static void main(String[] args) throws InterruptedException{
         TestRandPanel test = new TestRandPanel();
+        test.repainting();
+    }
+    
+    public void repainting() throws InterruptedException{
+        while(check == true){
+            frame.repaint();
+            Thread.sleep(100);
+        }
     }
 }
