@@ -20,12 +20,7 @@ public class TestRandPanel implements ActionListener{
     }
 
     public void actionPerformed(ActionEvent a){
-        if(check==true){
-            check = false;
-        }else{
-            check = true;
-        }
-        System.out.println(check);
+        frame.repaint();
     }
 
     public static void main(String[] args) throws InterruptedException{
